@@ -1,6 +1,11 @@
 ## a bit plan
 
+**Difficulty:** Baby-Easy
+**Author:** moonetics
+
 ### Description
+
+I dare you cant find my flag
 
 ### Solution
 
