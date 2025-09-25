@@ -1,0 +1,5 @@
+dbg/
+dwarf2json/
+profiles/
+linux-image-unsigned-5.15.0-153-generic-dbgsym_5.15.0-153.163_amd64.ddeb
+incident_trace.lime
