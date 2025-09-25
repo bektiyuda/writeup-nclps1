@@ -1,0 +1,309 @@
+   4           RESUME                   0
+
+   5           LOAD_GLOBAL              1 (open + NULL)
+               LOAD_CONST               1 ('flag.txt')
+               LOAD_CONST               2 ('r')
+               CALL                     2
+               BEFORE_WITH
+       L1:     STORE_FAST               0 (f)
+
+   6           LOAD_FAST                0 (f)
+               LOAD_ATTR                3 (read + NULL|self)
+               CALL                     0
+               LOAD_ATTR                5 (strip + NULL|self)
+               CALL                     0
+
+   5   L2:     SWAP                     2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               CALL                     2
+               POP_TOP
+               RETURN_VALUE
+       L3:     PUSH_EXC_INFO
+               WITH_EXCEPT_START
+               TO_BOOL
+               POP_JUMP_IF_TRUE         1 (to L4)
+               RERAISE                  2
+       L4:     POP_TOP
+       L5:     POP_EXCEPT
+               POP_TOP
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L6:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L3 [1] lasti
+  L3 to L5 -> L6 [3] lasti
+  8           RESUME                   0
+
+  9           LOAD_GLOBAL              1 (len + NULL)
+              LOAD_FAST                0 (flag)
+              CALL                     1
+              LOAD_CONST               1 (2)
+              BINARY_OP                2 (//)
+              STORE_FAST               1 (mid)
+
+ 10           LOAD_FAST                0 (flag)
+              LOAD_CONST               0 (None)
+              LOAD_FAST                1 (mid)
+              BINARY_SLICE
+              LOAD_FAST_LOAD_FAST      1 (flag, mid)
+              LOAD_CONST               0 (None)
+              BINARY_SLICE
+              BUILD_TUPLE              2
+              RETURN_VALUE
+  12           RESUME                   0
+
+  13           LOAD_CONST               1 ((43, 217, 41, 69, 73, 155))
+               GET_ITER
+               LOAD_FAST_AND_CLEAR      0 (x)
+               SWAP                     2
+       L1:     BUILD_LIST               0
+               SWAP                     2
+               GET_ITER
+       L2:     FOR_ITER                 4 (to L3)
+               STORE_FAST_LOAD_FAST     0 (x, x)
+               LIST_APPEND              2
+               JUMP_BACKWARD            6 (to L2)
+       L3:     END_FOR
+               POP_TOP
+       L4:     SWAP                     2
+               STORE_FAST               0 (x)
+               RETURN_VALUE
+
+  --   L5:     SWAP                     2
+               POP_TOP
+
+  13           SWAP                     2
+               STORE_FAST               0 (x)
+               RERAISE                  0
+ExceptionTable:
+  L1 to L4 -> L5 [2]
+ 15           RESUME                   0
+
+ 16           LOAD_CONST               1 ('')
+              LOAD_ATTR                1 (join + NULL|self)
+              LOAD_CONST               2 (<code object <genexpr> at 0x00000200ED8D1A10, file "C:\Users\radan\Downloads\NCLPS1\reverse\2. byte code\chall.py", line 16>)
+              MAKE_FUNCTION
+              LOAD_GLOBAL              3 (zip + NULL)
+              LOAD_FAST_LOAD_FAST      1 (s1, s2)
+              LOAD_GLOBAL              5 (len + NULL)
+              LOAD_FAST                0 (s1)
+              CALL                     1
+              LOAD_GLOBAL              5 (len + NULL)
+              LOAD_FAST                1 (s2)
+              CALL                     1
+              BINARY_OP                2 (//)
+              LOAD_CONST               3 (1)
+              BINARY_OP                0 (+)
+              BINARY_OP                5 (*)
+              LOAD_CONST               0 (None)
+              LOAD_GLOBAL              5 (len + NULL)
+              LOAD_FAST                0 (s1)
+              CALL                     1
+              BINARY_SLICE
+              CALL                     2
+              GET_ITER
+              CALL                     0
+              CALL                     1
+              RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x00000200ED8D1A10, file "C:\Users\radan\Downloads\NCLPS1\reverse\2. byte code\chall.py", line 16>:
+  16           RETURN_GENERATOR
+               POP_TOP
+       L1:     RESUME                   0
+               LOAD_FAST                0 (.0)
+               GET_ITER
+       L2:     FOR_ITER                30 (to L3)
+               UNPACK_SEQUENCE          2
+               STORE_FAST_STORE_FAST   18 (a, b)
+               LOAD_GLOBAL              1 (chr + NULL)
+               LOAD_GLOBAL              3 (ord + NULL)
+               LOAD_FAST                1 (a)
+               CALL                     1
+               LOAD_FAST                2 (b)
+               BINARY_OP               12 (^)
+               CALL                     1
+               YIELD_VALUE              0
+               RESUME                   5
+               POP_TOP
+               JUMP_BACKWARD           32 (to L2)
+       L3:     END_FOR
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L4:     CALL_INTRINSIC_1         3 (INTRINSIC_STOPITERATION_ERROR)
+               RERAISE                  1
+ExceptionTable:
+  L1 to L4 -> L4 [0] lasti
+ 18           RESUME                   0
+
+ 19           LOAD_GLOBAL              1 (chr + NULL)
+              LOAD_GLOBAL              3 (ord + NULL)
+              LOAD_FAST                0 (char)
+              CALL                     1
+              LOAD_FAST                1 (amount)
+              BINARY_OP               10 (-)
+              LOAD_CONST               1 (256)
+              BINARY_OP                6 (%)
+              CALL                     1
+              RETURN_VALUE
+ 21           RESUME                   0
+
+ 22           LOAD_GLOBAL              1 (chr + NULL)
+              LOAD_GLOBAL              3 (ord + NULL)
+              LOAD_FAST                0 (char)
+              CALL                     1
+              LOAD_FAST                1 (amount)
+              BINARY_OP                0 (+)
+              LOAD_CONST               1 (256)
+              BINARY_OP                6 (%)
+              CALL                     1
+              RETURN_VALUE
+ 24           RESUME                   0
+
+ 25           LOAD_GLOBAL              1 (b85encode + NULL)
+              LOAD_CONST               1 ('')
+              LOAD_ATTR                3 (join + NULL|self)
+              LOAD_CONST               2 (<code object <genexpr> at 0x00000200ED6BA170, file "C:\Users\radan\Downloads\NCLPS1\reverse\2. byte code\chall.py", line 25>)
+              MAKE_FUNCTION
+              LOAD_GLOBAL              5 (enumerate + NULL)
+              LOAD_FAST                0 (flag)
+              CALL                     1
+              GET_ITER
+              CALL                     0
+              CALL                     1
+              LOAD_ATTR                7 (encode + NULL|self)
+              CALL                     0
+              CALL                     1
+              LOAD_ATTR                9 (decode + NULL|self)
+              CALL                     0
+              RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x00000200ED6BA170, file "C:\Users\radan\Downloads\NCLPS1\reverse\2. byte code\chall.py", line 25>:
+  25           RETURN_GENERATOR
+               POP_TOP
+       L1:     RESUME                   0
+               LOAD_FAST                0 (.0)
+               GET_ITER
+       L2:     FOR_ITER                40 (to L5)
+               UNPACK_SEQUENCE          2
+               STORE_FAST_STORE_FAST   18 (i, c)
+               LOAD_FAST                1 (i)
+               LOAD_CONST               0 (2)
+               BINARY_OP                6 (%)
+               LOAD_CONST               1 (0)
+               COMPARE_OP              88 (bool(==))
+               POP_JUMP_IF_FALSE       12 (to L3)
+               LOAD_GLOBAL              1 (left + NULL)
+               LOAD_FAST                2 (c)
+               LOAD_CONST               0 (2)
+               CALL                     2
+               JUMP_FORWARD            11 (to L4)
+       L3:     LOAD_GLOBAL              3 (r_t + NULL)
+               LOAD_FAST                2 (c)
+               LOAD_CONST               2 (3)
+               CALL                     2
+       L4:     YIELD_VALUE              0
+               RESUME                   5
+               POP_TOP
+               JUMP_BACKWARD           42 (to L2)
+       L5:     END_FOR
+               POP_TOP
+               RETURN_CONST             3 (None)
+
+  --   L6:     CALL_INTRINSIC_1         3 (INTRINSIC_STOPITERATION_ERROR)
+               RERAISE                  1
+ExceptionTable:
+  L1 to L6 -> L6 [0] lasti
+  27            RESUME                   0
+
+  28            LOAD_GLOBAL              1 (re + NULL)
+                LOAD_GLOBAL              3 (da + NULL)
+                CALL                     0
+                CALL                     1
+                UNPACK_SEQUENCE          2
+                STORE_FAST_STORE_FAST    1 (aer, abu)
+
+  29            LOAD_GLOBAL              5 (open + NULL)
+                LOAD_CONST               1 ('output.txt')
+                LOAD_CONST               2 ('w')
+                CALL                     2
+                BEFORE_WITH
+        L1:     STORE_FAST               2 (f)
+
+  30            LOAD_FAST                2 (f)
+                LOAD_ATTR                7 (write + NULL|self)
+                LOAD_GLOBAL              9 (str + NULL)
+                LOAD_GLOBAL             11 (qw + NULL)
+                LOAD_FAST                0 (aer)
+                LOAD_GLOBAL             13 (ot + NULL)
+                CALL                     0
+                CALL                     2
+                LOAD_GLOBAL             15 (cd + NULL)
+                LOAD_FAST                1 (abu)
+                CALL                     1
+                BINARY_OP                0 (+)
+                GET_ITER
+                LOAD_FAST_AND_CLEAR      3 (c)
+                SWAP                     2
+        L2:     BUILD_LIST               0
+                SWAP                     2
+                GET_ITER
+        L3:     FOR_ITER                14 (to L4)
+                STORE_FAST               3 (c)
+                LOAD_GLOBAL             17 (ord + NULL)
+                LOAD_FAST                3 (c)
+                CALL                     1
+                LIST_APPEND              2
+                JUMP_BACKWARD           16 (to L3)
+        L4:     END_FOR
+                POP_TOP
+        L5:     SWAP                     2
+                STORE_FAST               3 (c)
+                CALL                     1
+                CALL                     1
+                POP_TOP
+
+  31            LOAD_FAST                2 (f)
+                LOAD_ATTR               19 (close + NULL|self)
+                CALL                     0
+                POP_TOP
+
+  29    L6:     LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                CALL                     2
+                POP_TOP
+                RETURN_CONST             0 (None)
+
+  --    L7:     SWAP                     2
+                POP_TOP
+
+  30            SWAP                     2
+                STORE_FAST               3 (c)
+                RERAISE                  0
+
+  29    L8:     PUSH_EXC_INFO
+                WITH_EXCEPT_START
+                TO_BOOL
+                POP_JUMP_IF_TRUE         1 (to L9)
+                RERAISE                  2
+        L9:     POP_TOP
+       L10:     POP_EXCEPT
+                POP_TOP
+                POP_TOP
+                RETURN_CONST             0 (None)
+
+  --   L11:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L8 [1] lasti
+  L2 to L5 -> L7 [7]
+  L5 to L6 -> L8 [1] lasti
+  L7 to L8 -> L8 [1] lasti
+  L8 to L10 -> L11 [3] lasti
