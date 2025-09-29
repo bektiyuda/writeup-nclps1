@@ -1,24 +1,27 @@
-# Solusi Tantangan: Recovery & Dekripsi VaultBox (NCLP)
+## Password Manager v2
+**Difficulty:** Hard-Insane
+**Author:** moonetics
 
-## Judul Teknis
+### Deskripsi
+VaultBox adalah aplikasi password manager Windows untuk menyimpan kredensial. Aplikasi berjalan offline, mendukung perubahan lokasi vault folder, dan menyediakan generator password.
 
-**Eksploitasi Kriptografi Offline pada VaultBox — Pemulihan Master Password melalui PCG‑increment 24‑bit dan Dekripsi Per‑Entry NCLP**
+TL;DR
+Setel Master Password saat membuka aplikasi.
+Item disimpan satu-file-per-entry di folder vault (.nclp).
+Format file memiliki header + ciphertext + HMAC.
+Urutan proteksi data: PBKDF2 → AES-256-CBC → Rotator (bit-rotate) → XOR keystream → HMAC.
+Master dapat dipulihkan secara lokal (tidak butuh jaringan).
 
-## Informasi Tantangan
+Hint
+Magic bytes: NCLP
+Kunci diturunkan dengan PBKDF2 bawaan .NET Framework (Rfc2898DeriveBytes) default = HMAC-SHA1.
+Rounds yang ditulis di header bisa “lebih besar” daripada yang dipakai; implementasi melakukan clamp ke nilai tertentu untuk performa (perhatikan kode).
+Verifikasi HMAC-SHA256 atas header||ciphertext.
+XOR keystream: blok 32-byte dari HMAC-SHA256(K_xor, counter_le).
+Gate UI melakukan XOR(0x5A) → SHA-256 → Base64 (di-obfuscate) untuk validasi.
+Increment PCG32 hanya tersimpan 40-bit bawah; 24-bit atas disembunyikan → brute-force ruang 2^24.
 
-Judul: *VaultBox — Password Manager (Reverse engineering)*
-Skor: (isi sesuai kompetisi)
-Penulis/Tim: (isi sesuai kompetisi)
-Koneksi: file `vaultbox.exe` (aplikasi .NET WinForms), folder `vault/` berisi ~37 file `.nclp` per‑entry.
-
-## Deskripsi (kutipan langsung dari soal)
-
-"VaultBox adalah aplikasi password manager Windows untuk menyimpan kredensial. Aplikasi berjalan offline, mendukung perubahan lokasi vault folder, dan menyediakan generator password. Setel Master Password saat membuka aplikasi. Item disimpan satu-file-per-entry di folder vault (.nclp). Format file memiliki header + ciphertext + HMAC. Urutan proteksi data: PBKDF2 → AES-256-CBC → Rotator (bit-rotate) → XOR keystream → HMAC. Master dapat dipulihkan secara lokal (tidak butuh jaringan). Hint: Magic bytes: NCLP; KDF = Rfc2898DeriveBytes (HMAC-SHA1), rounds dibaca dari header tapi akan **clamp**; XOR keystream: blok 32‑byte dari HMAC-SHA256(K_xor, counter_le). Gate UI melakukan XOR(0x5A) → SHA‑256 → Base64 (di‑obfuscate) untuk validasi. PCG32 increment menyimpan 40‑bit bawah, 24‑bit atas disembunyikan → brute‑force ruang 2^24."
-
----
-
-## Initial Analysis
-
+### Solution
 Setelah memuat `vaultbox.exe` dapat diketahui bahwa program melakukan parser header file `NclpHeader`, melakukan read/write file `NclpFile`, derive key `Kdf.DeriveKeys`, XOR keystream `XorKeystream.Apply`,  rotator `Rotator`, AES wrapper `AesCipher`, dan gate validasi `MasterGate`.
 
 ```csharp
@@ -390,14 +393,6 @@ MasterGate menghitung `candidate_hash = Base64(SHA256(XOR_UTF8(master, 0x5A)))` 
 
 Setelah master diketahui, dekripsi `.nclp` dapat dilakukan dengan: turunkan tiga kunci PBKDF2 (sesuai clamp), verifikasi `HMAC-SHA256(kMac, header||cipher)` byte‑per‑byte, lalu urutkan balikan: XOR‑keystream -> unrotate -> AES‑CBC decrypt -> gunzip.
 
-Potensi masalah implementasi yang bisa membuat dekripsi gagal umumnya adalah: parsing header yang keliru (offset meta_len), penggunaan endianness yang salah pada counter atau Int32 field, atau kekeliruan clamp KDF. Semua ini berhasil diidentifikasi lewat dekompilasi dan disimulasikan persis di PoC.
-
----
-
-## Implementasi Solusi (PoC) — ringkasan langkah dan kode
-
-Saya menyediakan dua PoC minimal yang berhasil pada lingkungan pengujian: (1) `recover_master.py` untuk brute‑force 2^24 dan memulihkan Master; (2) `solver.py` (atau `decrypt_all.py`) untuk mendekripsi semua file `.nclp` di folder `vault` dengan Master yang sudah diketahui.
-
 Pertama, brute‑force recovery dengan skrip berikut yang berhenti ketika master ditemukan dan memverifikasinya dengan fungsi gate yang identik dengan aplikasi:
 
 ```python
@@ -556,5 +551,4 @@ if __name__ == "__main__":
 ```
 
 ### Flag
-
 NCLPS1{PBKDF2_&&_pCg32_40_b1t_1ncR3m3Nt_t0p24_h1d3_r3COv3r3d_thEn_VauLt_decrYpt3d_a21d1d6a82}

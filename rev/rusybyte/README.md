@@ -1,14 +1,11 @@
 ## rusybyte
-
 **Difficulty:** Hard-Insane
 **Author:** n4siKvn1ng
 
 ### Description
-
 Apakah kalian pikir reverse chall hanya berupa c code? Bagaimana dengan chall sederhana ini, hope you find how the code is work :D
 
 ### Solution
-
 Ketika menelusuri `chall.ll`, alur fungsi main adalah seperti berikut: 
 
 ```llvm
@@ -80,5 +77,4 @@ print(data.decode())
 ```
 
 ### Flag
-
 NCLPS1{rust_code_is_faster_than_go_code_:P}

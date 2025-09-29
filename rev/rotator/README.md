@@ -1,14 +1,11 @@
 ## Rotator
-
 **Difficulty:** Easy - Medium
 **Author:** moonetics
 
 ### Description
-
 Sebuah layanan internal bernama rotator melakukan rotasi penanda (token) untuk penandatanganan webhook. Untuk menghindari downtime, proses mempertahankan dua slot memori dan berganti aktif–pasif saat rotasi berlangsung
 
 ### Solution
-
 ```c
 int main(void)
 
@@ -197,5 +194,4 @@ print(recover(blob).decode())
 ```
 
 ### Flag
-
 NCLPS1{pee_balap._k3ren_k4mu_b1s4_m3nYeL3s41kan_R4ce_c0nd1Tion_4tau_kAmu_DeCrYpt_buk4n_bypass?_770c130987}

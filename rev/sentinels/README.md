@@ -1,14 +1,11 @@
 ## Sentinels
-
 **Difficulty:** Hard
 **Author:** moonetics
 
 ### Description
-
 An urgent, encrypted brief arrives from a trusted contact inside the research collective known as “Sentinels,” explaining that the network’s automated gatekeeper—powered by a compact executable that enforces the Sentinel authentication routine—has begun denying even authorized maintenance traffic, and unless someone off-site can quickly dissect the program, understand how the Sentinel validates visitors, and devise a discreet workaround, the team risks being locked out during an impending solar-storm blackout that would leave critical systems untended.
 
 ### Solution
-
 ```c
 undefined8 main(undefined8 param_1,undefined8 param_2,char **param_3)
 {
@@ -262,5 +259,4 @@ print(out.decode())
 ```
 
 ### Flag
-
 NCLPS1{w3lcOme_s3ntinel_go0dd_tO_s3e_yo0uu_ag41n_485eb2be91}

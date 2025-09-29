@@ -1,14 +1,11 @@
 ## License Activation
-
 **Difficulty:** Easy
 **Author:** moonetics
 
 ### Description
-
 Utilitas baris-perintah untuk memverifikasi kunci lisensi secara offline. Masukkan kunci dengan format NCLPS1{...} Jika valid, aplikasi menampilkan Activation successful. Jika tidak, akan menampilkan Activation failed.
 
 ### Solution
-
 ```python
 def _rol8(x, r):
     r &= 7
@@ -154,5 +151,4 @@ print(bytes(flag).decode())
 ```
 
 ### Flag
-
 NCLPS1{he1i_KamU_ter1m4k4siH_y4_uD4h_akt1v4si_l1SeNnns1_k4m1_b4c7599f3b}

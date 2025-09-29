@@ -1,13 +1,11 @@
 ## Telemetry
-
 **Difficulty:** Easy-Medium
 **Author:** moonetics
 
 ### Description
-
 CLI kecil untuk memvalidasi dan men-trace sebuah “session tag” yang digunakan modul telemetry internal. Mendukung mode verbose untuk membantu penelusuran jalur proses byte-per-byte. Dirancang untuk berjalan di Linux x86_64 (release build)
 
-## Initial Analysis
+### Solution
 
 ```c
 undefined8 main(int argc, char **argv) {
@@ -134,5 +132,4 @@ print(flag.decode('utf-8', errors='replace'))
 ```
 
 ### Flag
-
 NCLPS1{t3lLemeTry._0ps_4lPha_2025_+bU1ld1a_0b5085122b}

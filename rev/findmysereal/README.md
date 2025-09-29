@@ -1,25 +1,9 @@
-# findmysereal — Serial-Checked Flag Unpacker via Custom FNV‑1a Hash & ROTL/XOR Decode (Anti‑Debug & Timing Gate Bypass)
+## findmysereal
 
-## Challenge Information
+### Description
+ayo cari aku cari aku, blob blob blob
 
-**Title:** findmysereal
-**Category:** Reverse Engineering
-**Points:** — (tidak dicantumkan)
-**Author:** — (tidak dicantumkan)
-**Connection/Attachment:** Binary ELF (64‑bit) bernama `findmysereal`
-
-## Description (kutipan langsung dari program)
-
-> "Bingung juga ini apa, cari aja deh flag nya h3h3"
-> "Enter serial:"
-> Pada jalur sukses: "Serial OK. Decrypting flag..."
-> Saat deteksi debugger: "Debugger detected - aborting."
-> Saat gagal timing: "Timing check failed - try again."
-> Saat serial salah: "Invalid serial."
-
----
-
-## Initial Analysis
+### Solution
 
 ```c
   std::getline<>((istream *)&std::cin,(string *)&local_68,cVar4);
@@ -31,7 +15,7 @@
   }
 ```
 
-### Timing Gate
+* Timing Gate
 ```cpp
     lVar7 = std::chrono::_V2::system_clock::now();
     lVar8 = 0;
@@ -78,7 +62,7 @@ LAB_00101309:
 
 Program meminta satu baris *serial*, menjalankan anti‑debug `ptrace(PTRACE_TRACEME)`, kemudian melakukan *timing gate* memakai `std::chrono::system_clock::now()` sebelum dan sesudah *busy loop* iterasi 1.200.000 kali; jika durasi melebihi ~0,8 detik, program menghentikan eksekusi. Setelah lolos, input di-*hash* memakai skema yang menyerupai FNV‑1a dan dibandingkan terhadap konstanta target.
 
-### Custom Hash atas Serial
+* Custom Hash atas Serial
 
 ```c
       else {
@@ -154,5 +138,4 @@ print(flag)
 ```
 
 ### Flag
-
 NCLP{d4mN_7ou_F0uNd_m3}

@@ -1,10 +1,8 @@
 ## Gamble Operation
-
 **Difficulty:** Medium
 **Author:** moonetics
 
 ### Description
-
 A secret agent has just completed a crucial mission, successfully infiltrating an enemy lair and obtaining vital intelligence data. To ensure the confidentiality of the data, he uses a special encryption program designed to be highly secure. The program claims to use a multi-layered encryption technique with a randomly generated key for each session, ensuring no two encryptions are the same.
 
 However, in the middle of writing the encrypted data to disk, an unexpected incident occurred that caused the agent's system to crash. Fortunately, he was able to recover some artifacts from the crashed system.
@@ -12,7 +10,6 @@ However, in the middle of writing the encrypted data to disk, an unexpected inci
 Your task is that of a reverse engineering expert. Using the available artifacts, you must recover the original hidden intelligence data.
 
 ### Solution
-
 ```c
 void initialize_keys(int num_keys,int key_len)
 
@@ -221,4 +218,3 @@ except UnicodeDecodeError:
 ### Flag
 
 NCLPS1{ay00_m3nujJu_t4akk_t3rbba4t4s_d4an_Mel4mp4uwii_e64b364595}
-

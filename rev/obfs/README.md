@@ -1,16 +1,13 @@
 ## Obfs
-
 **Difficulty:** Medium
 **Author:** moonetics
 
-### Description (kutipan challenge)
-
+### Description
 Legend says the author loved to hide secrets in plain sight, and enjoyed making puzzles only the most persistent could solve.
 
 Can you uncover the secret message the author left behind?
 
 ### Solution
-
 ```c
   pcVar2 = fgets(local_58,0x43,stdin);
   if (pcVar2 == (char *)0x0) {
@@ -168,5 +165,4 @@ except Exception as e:
 ```
 
 ### Flag
-
 NCLPS1{m3em4ng_k4dang_oBbfusc4t1on_m3nyer4mkan_ma4f_y_c395c67777}

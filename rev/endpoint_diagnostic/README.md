@@ -1,16 +1,13 @@
 ## Endpoint Diagnostic
-
 **Difficulty:** Easy-Medium
 **Author:** n4siKvn1ng
 
 ### Description
-
 Perusahaan sedang menjalani audit operasional dan kepatuhan. Dalam rangka verifikasi alur onboarding endpoint, tim GRC meminta Infra menjalankan sebuah utilitas diagnostik (diag) di beberapa host untuk memastikan bootstrap handshake ke layanan audit berjalan benar.
 
 Sebagai engineer yang ditugaskan untuk health-check integrasi, Anda perlu membuktikan bahwa token tersebut benar-benar terbentuk saat proses berjalan
 
 ### Solution
-
 ![alt text](image.png)
 
 Hasil decompile memperlihatkan hanya dua fungsi `int main(void)` dan `void* eraser(void*)`. Indikasi ChaCha20 tampak jelas dari konstanta state: `0x61707865`, `0x3320646e`, `0x79622d32`, `0x6b206574` ("expand 32-byte k") serta pola rotasi **16, 12, 8, 7** pada ronde.
@@ -480,5 +477,4 @@ if __name__ == '__main__':
 ```
 
 ### Flag
-
 NCLPS1{h4lo_s4aAt_1ni_p3rus4HaaN_seD4ng_m3LaKukan_4ud1t_moh0on_s3Lalu_m3ng1kutI_pr0tokol_p3rusahaan_91425d37c5}

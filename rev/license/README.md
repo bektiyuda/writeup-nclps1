@@ -1,14 +1,11 @@
 ## License
-
 **Difficulty:** Medium
 **Author:** moonetics
 
 ### Description
-
 A local software company has just released their digital product. This product can only be used after activation using an encrypted license file that will be generated if you can enter a valid “authorization code”. Their internal security team is quite confident that this protection system is safe enough from piracy because there is no flag directly in the binary
 
 ### Solution
-
 ```c
 undefined8 main(void)
 
@@ -108,5 +105,4 @@ print(pt.decode())
 ```
 
 ### Flag
-
 NCLPS1{i1'mM_s0rRy_m4ke_y0u_fe3lba4d_bBut_c0Ngr4ts_047d9db348}

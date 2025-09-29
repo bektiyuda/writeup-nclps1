@@ -1,14 +1,11 @@
 ## byte code
-
 **Difficulty:** Easy-Medium
 **Author:** n4siKvn1ng
 
 ### Description
-
 This code is something another, can you see what the code is todo?
 
 ### Solution
-
 ```txt
 [101, 154, 101, 21, 26, 170, 80, 171, 76, 19, 44, 233, 88, 234, 118, 32, 39, 252, 26, 183, 76, 32, 97, 53, 81, 88, 99, 85, 50, 125, 74, 76, 87, 94, 33, 121, 124, 86, 48, 63, 48, 68, 85, 49, 108, 122, 52, 87, 53, 82, 35]
 ```
@@ -82,5 +79,4 @@ print(flag)
 ```
 
 ### Flag
-
 NCLPS1{reVers3_eng1neer1ng_python_byte_c0de}

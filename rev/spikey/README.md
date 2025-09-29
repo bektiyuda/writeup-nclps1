@@ -1,14 +1,11 @@
 ## Spikey 
-
 **Difficulty:** Medium-Hard
 **Author:** moonetics
 
 ### Description
-
 You are hired as a security consultant to audit “Spikey”, the control module on a prototype research drone. It's discovered that there's a logic bomb in its firmware: the drone will only unlock if given eight passwords at precise time intervals - and it will detect the debugger. Your mission: reverse-engineer and disable the logic bomb to get the mission access code without triggering the “explosion”.
 
 ### Solution
-
 ```c
 __time64_t t = _time64(NULL);
 srand((uint)t);
@@ -117,5 +114,4 @@ print(flag)
 ```
 
 ### Flag
-
 NCLPS1{w0ww_k4mu_b3Rh4siL_d3fuSe_l0g1c_b0mb_d3ng4n_t1ming_pr3si1s1_e4743a6046}
