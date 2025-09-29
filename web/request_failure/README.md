@@ -1,17 +1,12 @@
 ## Request Failure
-
 **Difficulty:** Easy-Medium
-
 **Author:** moonetics
-
 **URL:** [http://ctf.noctralupra.space:10304](http://ctf.noctralupra.space:10304)
 
 ### Description
-
 Karena banyak website yang tidak bisa dibuka, jadi aku memutuskan untuk membuat proxy sendiri.
 
 ### Solution
-
 ![alt text](image-1.png)
 
 Pada source codenya, saya menemukan bahwa ada endpoint `/flag` yang sebenarnya mengembalikan isi flag, tetapi endpoint itu hanya mengizinkan akses dari `localhost`.
@@ -39,5 +34,4 @@ Web meresponse dengan menampilkan flagnya.
 ![](image.png)
 
 ### Flag
-
 NCLPS1{p3nt1n99ny4_s3cur33_s0ftwar33e_dev3lo0pm3nt_l1fe3e3_cycl3_fe7668c1e0}

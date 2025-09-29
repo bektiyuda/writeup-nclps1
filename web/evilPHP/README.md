@@ -1,17 +1,12 @@
 ## EvilPHP
-
 **Difficulty:** Easy
-
 **Author:** maul
-
 **URL:** [http://ctf.noctralupra.space:10308](http://ctf.noctralupra.space:10308)
 
 ### Description
-
 Author minta jangan ada description
 
 ### Solution
-
 ![alt text](image-2.png)
 
 Saya memulai proses recon terhadap layanan pada URL yang diberikan. Ditemukan pada response http headers bahwa tech stacknya menggunakan PHP/8.1.0-dev.  Karena versi tersebut tampak aneh, langkah berikutnya adalah mencari CVE yang terkait dengan versi PHP tersebut.
@@ -35,5 +30,4 @@ User-Agent: zerodiumsystem("cat /flag.txt");
 Dengan begitu saya berhasil menemukan file flag dan membaca isinya langsung dari respon HTTP.
 
 ### Flag
-
 NCLPS1{php_1n1_j4h4t_b4ng3ts}

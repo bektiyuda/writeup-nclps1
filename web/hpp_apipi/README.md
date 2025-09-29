@@ -1,20 +1,15 @@
 ## hpp apipipipipipi
-
 **Difficulty:** Easy
-
 **Author:** xixixi
-
 **URL:** 
 /a/ -> http://ctf.noctralupra.space:10309/a/ 
 /b/ -> http://ctf.noctralupra.space:10309/a/ 
 /c/ -> http://ctf.noctralupra.space:10309/a/
 
 ### Description
-
 katanya si secure, 3 dashboard /a/ /b/ /c/, tapi ya... masih pake http 1
 
 ### Solution
-
 ![alt text](image.png)
 
 Dari tampilan awal web diberikan hint untuk login via endpoint `/a/login?user=&role=`.
@@ -48,6 +43,4 @@ Mengakses hint pertama pada `/c/` ditemukan hint untuk menambahkan `scope[]=elev
 Langkah terakhir adalah mengakses `/c/proxy?token=TOKEN_C&scope=read&scope[]=elevated&path=/internal/flag` dengan memasukkan token yang didapat sebelumnya dan flagnya akan muncul.
 
 ### Flag
-
 NCLPS1{1e7e662f-209e-467c-97bb-0f787abd99a4}
-

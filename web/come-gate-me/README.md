@@ -1,17 +1,12 @@
 ## come-gate-me
-
 **Difficulty:** Easy
-
 **Author:** xixixiix
-
 **URL:** [http://ctf.noctralupra.space:10313/](http://ctf.noctralupra.space:10313/)
 
 ### Description
-
 ini flagnya dynamic, jadi ya testing aja.. ga ada brute force apalgi jadi dukun.. logika aja..
 
 ### Solution
-
 ![alt text](image.png)
 
 Ketika mengakses website, diberikan tampilan untuk mengupload suatu file dengan tambahan hint bahwa file akan disimpan dengan nama yang unik dan petunjuk akan muncul di tempat yang tidak terduga. Diketahui bahwa file yang diterima oleh website adalah file json.
@@ -142,5 +137,4 @@ Dengan begitu dapat dilakukan otomasi untuk: upload manifest (SSRF), tebak nama 
 ![alt text](image-6.png)
 
 ### Flag
-
 NCLPS1{ssrf_to_gate_then_predict_the_filename}

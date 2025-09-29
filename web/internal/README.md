@@ -1,17 +1,12 @@
 ## Internal
-
 **Difficulty:** Easy
-
 **Author:** maul
-
 **URL:** [http://ctf.noctralupra.space:10306](http://ctf.noctralupra.space:10306)
 
 ### Description
-
 jangan di bruteforce!
 
 ### Solution
-
 Pada challenge ini diberikan source code sederhana yang menjalankan sebuah halaman utama yang menyediakan halaman selamat datang dan login. 
 
 ![alt text](image.png)
@@ -41,5 +36,4 @@ Dengan payload tersebut, web mengeksekusi perintah `ls /`. Ditemukan file flag.t
 ```
 
 ### Flag
-
 NCLPS1{hidd3n_ssti_xd}

@@ -1,16 +1,12 @@
 ## TeamBoard
-
 **Difficulty:** Medium
-
 **Author:** moonetics
-
 **URL:** [http://ctf.noctralupra.space:10311](http://ctf.noctralupra.space:10311) 
 
 ### Description
 Tim IT kami baru saja merilis Teamboard, aplikasi internal untuk kolaborasi proyek dan sprint (login, dashboard, pengaturan preferensi, serta fitur admin sederhana seperti ekspor/impor). Versi ini masih tahap staging dan kami butuh bantuanmu untuk melakukan security review dan menemukan potensi bug/kerentanan web.
 
 ### Solution
-
 Struktur web terdiri dari :
 - `index.php` yang memuat `bootstrap.php` terlebih dahulu, kemudian routing berdasarkan method dan path
 - Terdapat beberapa routes yang menarik: `/dashboard`, `/settings`, `/admin/export`, `/admin/import`
@@ -132,5 +128,4 @@ print(uipref)
 Setelah nilai UIPREF diganti dengan hasil generate solver maka web akan meresponse dengan output dari payload RCE yang dimasukkan.
 
 ### Flag
-
 NCLPS1{t3amb04rD_u1pr3f_oBj3ct_inj3ct1on_s3r1AlizE_dEFlat3_b4se64_7516d8bc52}

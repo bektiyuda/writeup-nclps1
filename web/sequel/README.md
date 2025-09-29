@@ -1,16 +1,9 @@
 ## sequel
-
 **Difficulty:** Easy
-
 **Author:** maul
-
 **URL:** [http://ctf.noctralupra.space:10315](http://ctf.noctralupra.space:10315)
 
-### Description
-
-
 ### Solution
-
 ![alt text](image-4.png)
 
 Web menyediakan form login dan sudah menyiapkan kredensial-nya. Setelah login akan ditemukan fitur search dan apabila memasukkan `'` maka akan terjadi `mysql error`
@@ -32,5 +25,4 @@ Sayangnya, dari kedua table tersebut tidak ada yang menampilkan flagnya secara l
 Dengan begitu, saya mencoba mengakses file `/etc/passwd` menggunakan payload `') UNION SELECT LOAD_FILE('/etc/passwd'),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -` dan disana didapatkan flagnya.
 
 ### Flag
-
 NCLPS1{R3ad_FIL3_Via_SQL_INJ3CTI0N}

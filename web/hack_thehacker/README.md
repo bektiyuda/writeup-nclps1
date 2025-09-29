@@ -1,19 +1,14 @@
 ## Hack TheHacker
-
 **Difficulty:** Easy
-
 **Author:** maul
-
 **URL:** [http://ctf.noctralupra.space:10301](http://ctf.noctralupra.space:10301)
 
 ### Description
-
 NoctraLupra kembali beraksi!, mereka meretas company besar.......
 
 Bisakah kamu meretas mereka??
 
 ### Solution
-
 ![alt text](image.png)
 
 Web memperlihatkan pesan bahwa attacker menanam backdoor webshell, tetapi tidak ada petunjuk tentang lokasinya. Karena tidak ada informasi lebih lanjut tentang nama file webshell, langkah pertama adalah melakukan fuzzing path untuk menemukan file yang tersembunyi.
@@ -49,5 +44,4 @@ Saya memanfaatkan `-mr "root|terminal|cmd"` untuk mencocokkan pola di response y
 Hasilnya ditemukan password yang valid adalah `12345`. Setelah itu, webshell dapat diakses dan menampilkan flag secara langsung di halaman.
 
 ### Flag
-
 NCLPS1{hacker_jangan_menyerang!!!!!!!!!!}

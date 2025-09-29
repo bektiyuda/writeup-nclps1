@@ -1,17 +1,12 @@
 ## TokoRoti
-
 **Difficulty:** Easy-Medium
-
 **Author:** maul
-
 **URL:** [http://ctf.noctralupra.space:10305](http://ctf.noctralupra.space:10305)
 
 ### Description
-
 NoctraLupra bikin usaha toko roti wkwkwk
 
 ### Solution
-
 ![alt text](image.png)
 
 Saya mulai dengan membuka URL yang diberikan dan melakukan pendaftaran akun baru (register) lalu login seperti biasa. Setelah berhasil login, web menampilkan panel admin yang terkunci pada dashboard. Dugaan awal panel admin bisa diakses dengan mengubah cookie payload yang dibuat melalui jwt. 
@@ -82,5 +77,4 @@ Langkah berikutnya saya mengganti token yang dipakai pada web. Token disimpan se
 Dari akses panel admin, server merespons dengan halaman khusus admin yang berisi flag.
 
 ### Flag
-
 NCLPS1{l3mah_4m4t_jwtnya_hahaha}

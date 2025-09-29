@@ -1,17 +1,12 @@
 ## AkuPintu
-
 **Difficulty:** Easy
-
 **Author:** maul
-
 **URL:** [http://ctf.noctralupra.space:10300](http://ctf.noctralupra.space:10300)
 
 ### Description
-
 Aku baru bikin projek buat nyimpen catetan hehe
 
 ### Solution
-
 ![alt text](image.png)
 
 Saya memulai dengan membuka URL yang diberikan dan mengamati alur dasar aplikasi. Setelah click pada button `Lihat Catatan Rahasia Saya`, terlihat bahwa setiap catatan dapat diakses melalui endpoint yang bersifat numerik, misalnya `/notes/1`. Pola ini memberi sinyal kuat bahwa aplikasi mungkin rentan terhadap **Insecure Direct Object Reference (IDOR)**, di mana objek (resource) di-referensi secara langsung menggunakan identifier yang dapat ditebak.
@@ -29,5 +24,4 @@ Dari sini, saya menelusuri beberapa ID lain secara manual untuk mencari petunjuk
 Hasilnya, endpoint `/notes/1337` menampilkan isi note berisi flag.
 
 ### Flag
-
 NCLPS1{id0r_expl0ited_y3yy}

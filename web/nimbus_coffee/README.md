@@ -1,17 +1,12 @@
 ## Nimbus Coffee
-
 **Difficulty:** Easy
-
 **Author:** moonetics
-
 **URL:** [http://ctf.noctralupra.space:10310](http://ctf.noctralupra.space:10310)
 
 ### Description
-
 Pemilik toko baru membaca kabar tentang CVE terbaru yang memengaruhi framework web yang digunakan situs ini. Tolong selidiki apakah aplikasi kami rentan dan buktikan dampaknya dengan mengakses konfigurasi sistem yang seharusnya hanya dapat diakses admin.
 
 ### Solution
-
 ![alt text](image-2.png)
 
 Saya mulai dengan meninjau source code yang disertakan. Dari `app/admin/flag/page.tsx` terlihat halaman yang menampilkan config web, di mana nilai `process.env.FLAG` dirender langsung ke halaman.
@@ -33,5 +28,4 @@ Dari sini saya menggunakan payload dengan request yang menambahkan header `x-mid
 Flag berada di path /admin/flag.
 
 ### Flag
-
 NCLPS1{n3xtJs_Fram3ewOrk_c4n_byP4Ss_th3_author1z4tion_w0w_b45d5b6c57}

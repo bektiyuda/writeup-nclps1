@@ -1,17 +1,12 @@
 ## Acme IntraMail
-
 **Difficulty:** Medium
-
 **Author:** moonetics
-
 **URL:** [http://ctf.noctralupra.space:10312](http://ctf.noctralupra.space:10312)
 
 ### Description
-
 Portal internal untuk pratinjau email dan direktori karyawan. Tugasmu meninjau source code, memahami alur pemrosesan input, dan menemukan cara memperoleh informasi rahasia yang tersimpan di server. Aplikasi tampak normal dan beberapa fitur bertindak sebagai pengalih.
 
 ### Solution
-
 ![alt text](image.png)
 
 Pada awal pemeriksaan saya meninjau endpoint `reports` yang menampilkan konten berdasarkan query parameter. Dari source code yang ada, terlihat ada templating engine yang merender ekspresi `{{ user.name }}` sebagai `Analyst`. 
@@ -43,5 +38,3 @@ Ditemukan file dengan nama `flag-UwVbbRZeebtUulQI.txt`. Dari situ saya mengganti
 ### Flag
 
 NCLPS1{sst1_d4n_w4Af_digaBunG?_hMmMmm_m3nar1kk_51b3cb2599}
-
-

@@ -1,17 +1,12 @@
 ## NewbieDev
-
 **Difficulty:** Medium
-
 **Author:** maul
-
 **URL:** [http://ctf.noctralupra.space:10302](http://ctf.noctralupra.space:10302)
 
 ### Description
-
 bro pikir sudah memperbaiki bugnya 😂😂
 
 ### Solution
-
 ![alt text](image-1.png)
 
 Ketika saya pertama kali mengakses website, saya melihat ada parameter `?page=` yang tampaknya memuat file lokal. 
@@ -36,7 +31,5 @@ Dari sini `etc/passwd` berhasil ditampilkan, sehingga teknik LFI (Local File Inc
 
 Karena saya gagal mengakses file - file yang biasa ada di ctf (flag, flag.txt, flag.html), saya melakukan bruteforce dengan burp intruder dengan wordlist https://gist.github.com/Mayfly277/63cce795df23f21b86aefa84ce9171e1. Dan flag ditemukan pada file /home/maul/.ssh/id_rsa.
 
-
 ### Flag
-
 NCLPS1{y0u_byp4ss3d_LFI?????}
