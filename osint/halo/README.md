@@ -54,5 +54,5 @@ Lahir tanggal `29 September 2004` (soal 5).
 ![alt text](image-7.png)
 Dengan memasukkan keyword nama anak pertama pada Google maka dapat diketahu bahwa dia pernah menulis artikel dengan judul `Artificial Intelligence Dalam Konteks Manusia: Transformasi Industri dan Kehidupan Sehari-hari Manusia` (soal 6).
 
-![alt text](img.png)
+![alt text](img.jpg)
 Dengan mencari data anak pertamanya di pddikti dapat diketahu bahwa dia berkuliah di `Universitas Muhammadiyah Malang` (soal 7) dan tanggal masuknya adalah `18 September 2023` (soal 8).
