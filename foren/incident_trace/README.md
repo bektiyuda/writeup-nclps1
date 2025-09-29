@@ -1,10 +1,8 @@
 ## Incident Trace
-
 **Difficulty:** Medium
 **Author:** moonetics
 
 ### Description
-
 Sebuah mesin memperlihatkan aktivitas tak biasa, diduga terinfeksi binary berbahaya. Timmu berhasil memperoleh memory dump dari mesin tersebut. Periksa lebih dalam untuk menemukan artefak penting yang tersembunyi ataupun mencurigakan.
 
 [Download](https://drive.google.com/file/d/1SP2rBKwu5wlDpr81rc7Ngvr5ii87dH6G/view)
@@ -12,7 +10,6 @@ Sebuah mesin memperlihatkan aktivitas tak biasa, diduga terinfeksi binary berbah
 Note: Flag has 2 parts
 
 ### Solution
-
 Saya mulai dengan asumsi bahwa file yang diberikan berformat `*.lime` (Linux memory extractor). Dalam kasus ini saya menggunakan Volatility untuk mengekstrak proses dan area memori yang relevan. 
 
 ![alt text](image.png)
@@ -61,5 +58,4 @@ Dengan begitu saya men-dump semua strings yang ada pada PID 597 dengan yara rule
 Saya menyimpan hasil scanning tersebut ke dalam file c2.txt dan flag partB ditemukan pada response body dari c2-nya.
 
 ### Flag
-
 NCLPS1{w00owWwW_k4mu_men3muK4n_fLa9_d1_h34p_seLanjuTNy4_d1_n3TwoRk_vla_C2_buff3r_2fafe5711d}

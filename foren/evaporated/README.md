@@ -1,14 +1,11 @@
 ## Evaporated
-
 **Difficulty:** Easy
 **Author:** moonetics
 
 ### Description
-
 someone is hide something there, but I don't know what they are hiding
 
 ### Solution
-
 ![](image.png)
 
 Diberi sebuah file evidence bernama `evaporated.001`. Saya membukanya di Autopsy untuk melihat isi artefaknya. Terlihat ada sebuah file terhapus bernama `logo noctra lupra.png`. Saya ekspor file tersebut untuk dianalisis lebih lanjut.
@@ -40,5 +37,4 @@ Dalam format PNG, parameter lebar dan tinggi disimpan di chunk **IHDR** (13 byte
 Benar saja, setelah tinggi gambar diperpanjang, bagian bawah gambar yang sebelumnya tidak muncul sekarang ikut ter-render dan menampilkan tulisan flag. 
 
 ### Flag
-
 NCLPS1{t4k_kus4ngkA_t3rny4Ta_fl4gny4_b3rsembuny1_09217b9c25}

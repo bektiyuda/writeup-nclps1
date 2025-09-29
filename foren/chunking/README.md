@@ -1,14 +1,11 @@
 ## Chunking
-
 **Difficulty:** Medium
 **Author:** moonetics
 
 ### Description
-
 Pada 23–24 Agustus 2025 (WIB), tim security melihat lonjakan ke endpoint internal melewati reverse proxy produksi. Permintaan berasal dari beberapa ASN cloud dan residential. Tidak ada anomali mencolok di status HTTP (umumnya 200/204), tetapi metrik request length meningkat, sementara upstream response time tetap rendah. Dugaan awal adalah beaconing
 
 ### Solution
-
 Saya mulai dengan mengekstrak file log yang diberikan. Langkah pertama adalah membuka log dan ditemukan field `rb64`. 
 
 Dari field rb64, dilakukan pengambilan semua nilai rb64 dengan kode berikut:
@@ -122,5 +119,4 @@ if __name__ == "__main__":
 ```
 
 ### Flag
-
 NCLPS1{gz_m3rup4kAn_mUlt1m3mBer_bUk4n_P3r_cHunK_74c0dbcef2}

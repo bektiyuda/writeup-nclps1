@@ -1,14 +1,11 @@
 ## the yuesbi
-
 **Difficulty:** Easy
 **Author:** moonetics
 
 ### Description
-
 harusnya kamu sudah tau ini apa? menarik bukan?
 
 ### Solution
-
 ![alt text](image.png)
 
 Saya mulai dengan membuka berkas `yuesbi.pcap` di Wireshark. Saat menelusuri paket, tampak proses enumerasi perangkat USB (GET_DESCRIPTOR, SET_CONFIGURATION) yang mengindikasikan ada **HID Keyboard**. 

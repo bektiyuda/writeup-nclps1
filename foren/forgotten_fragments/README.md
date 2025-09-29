@@ -1,14 +1,11 @@
 ## Forgotten Fragments
-
 **Difficulty:** Easy
 **Author:** moonetics
 
 ### Description
-
 Forgotten fragments of the screen still linger in the client’s memory.
 
 ### Solution
-
 ```bash
 xxd -g 1 -l 64 Cache0000.bin
 ```
@@ -30,5 +27,4 @@ Langkah berikutnya, saya menyiapkan tool-nya dan menjalankan parsernya. Tool ini
 Dengan begitu, di folder out akan muncul banyak file `.bmp` hasil ekstraksi tile dan file kolase bernama **`_collage.bmp`**. Dari sini, saya membuka kolase tersebut dan memperbesar area teks yang paling jelas. Potongan-potongan antarmuka yang tadinya terpisah menjadi membentuk tampilan layar yang cukup terbaca, dan flag terlihat jelas di sana.
 
 ### Flag
-
 NCLPS1{in1_ng4p4in_bAngG,_bElaJar_Ya_b4ng?_9c84ea66ff}

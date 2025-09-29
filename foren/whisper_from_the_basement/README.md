@@ -1,13 +1,9 @@
 ## Whisper From The Basement
-
 **Difficulty:** Hard
-
 **Author:** moonetics
-
 **Connect:** `ssh ctf.noctralupra.space -p (port)` — **User:** `root` — **Pass:** `nclpcomprom1sed`
 
 ### Description
-
 Sebuah computer berperilaku aneh dan langsung diisolasi dari jaringan. Kamu diberi akses ke klon terkarantina dari mesin tersebut. Akses keluar (egress) ke internet diblokir, jadi segala upaya “call home” akan gagal.
 
 Tugasmu adalah triage DFIR: cari tahu apa yang mengompromikan, bagaimana ia bertahan/bersembunyi, dan pulihkan 2 pesan yang berusaha disamarkan oleh pelaku.
@@ -15,7 +11,6 @@ Tugasmu adalah triage DFIR: cari tahu apa yang mengompromikan, bagaimana ia bert
 **Hint:** “Hook yang baik sering bersembunyi di tempat yang selalu dibaca loader dinamis. Satu file di /etc bisa membuat direktori ‘terlihat normal’ padahal tidak.”
 
 ### Solution
-
 Dari hint, mereferensikan jalur yang selalu disentuh loader dinamis, yaitu `/etc/ld.so.preload`. Di sana terdapat library custom.
 
 **Filesystem & loader.**
@@ -145,5 +140,5 @@ Output berhasil menunjukkan HIT pada salah satunya di **offset `0x3010` shift `0
 ```
 
 ### Flag
-
 NCLPS1{y1haa_th3_r00k1t_hav3e3e3_aa_l0tt_p3rs1stenc33_725775ce1c}
+

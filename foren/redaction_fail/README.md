@@ -1,14 +1,11 @@
 ## Redaction Fail
-
 **Difficulty:** Easy
 **Author:** moonetics
 
 ### Description
-
 Divisi compliance menyerahkan sebuah dokumen final yang telah dirilis ke pihak eksternal. Dokumen tersebut memuat blok hitam menutupi sebuah informasi sensitif. Ada dugaan bahwa proses “redaksi” tidak dilakukan dengan benar.
 
 ### Solution
-
 Saya mulai dengan membuka PDF dan melihat bagian yang disensor. Tapi sepertinya, ini hanyalah decoy saja dan tidak berpengaruh ke pencarian flagnya.
 
 Langkah berikutnya adalah memeriksa struktur internal PDF. Saya melaakukan command string pada file untuk mencari petunjuk filter kompresi dan pola yang tidak biasa.
@@ -34,5 +31,4 @@ print(result.decode("utf-8", errors="replace"))
 ```
 
 ### Flag
-
 NCLPS1{teRny4ta_fl4g_d1_r3v1Si0n_z3Ro_iNcr3MenTal_uPddaTe_m3n1pu_m4ta_0dd31503e3}

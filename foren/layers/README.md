@@ -1,16 +1,13 @@
 ## Layers
-
 **Difficulty:** Easy-Medium
 **Author:** moonetics
 
 ### Description
-
 Sebuah layanan internal (web static di reverse Nginx dengan backend di /api) sempat dibuild dan didistribusikan. Setelah itu, salah satu developer mengakui pernah memasukkan sebuah berkas teks berisi token internal ke dalam layanan tersebut, lalu diubah isinya beberapa waktu kemudian, dan akhirnya dihapus pada build berikutnya. Untuk keperluan audit & rotasi kredensial, tim diminta memastikan apakah artefak token itu masih tersisa, dan bila masih ada mengambil nilai token tersebut.
 
 [Download](https://drive.google.com/file/d/1oeYj7H-e4n-fQV3r47OpkoICb0H7ulwl/view)
 
 ### Solution
-
 Diberikan file `layers.tar` yang ternyata berformat OCI image layout. Langkah pertama adalah mengonversi OCI-layout ke bentuk yang lebih mudah dianalisis (docker-archive). Untuk itu saya menggunakan `skopeo`. Perintah konversinya seperti berikut:
 
 ```bash
@@ -37,10 +34,8 @@ tar xvf layers-docker.tar
 
 ![alt text](image-1.png)
 
-### Flag
-
-NCLPS1{d33p_l4yer5_pRes3rVe_t1meLinE_M0re_th4n_y0u_th1nk_822644845a}
-
 ### Referensi
-
 https://05t3.github.io/posts/Urchinsec-CTF/
+
+### Flag
+NCLPS1{d33p_l4yer5_pRes3rVe_t1meLinE_M0re_th4n_y0u_th1nk_822644845a}

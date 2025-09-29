@@ -1,14 +1,11 @@
 ## Reward Runner
-
 **Difficulty:** Medium
 **Author:** moonetics
 
 ### Description
-
 Rani baru saja mendapatkan email aneh. Pada email tersebut Rani diberikan file "rewardrunner.exe". Saat dijalankan Rani kehilangan pesan penting-nya. Tolong Rani membalikkan pesan penting tersebut.
 
 ### Solution
-
 ![alt text](image.png)
 ![alt text](image-1.png)
 
@@ -151,5 +148,4 @@ Dengan menjalankan script tersebut pada `secret.txt.idn.enc` yang diekstrak dari
 ![alt text](image-7.png)
 
 ### Flag
-
 NCLPS1{d0nt_be_l1ke_Rani,_y0OoOu_h4ve_t0_be_aw4r3_of_y0urr_3nv1ronm3nt_eef53df1e1}
