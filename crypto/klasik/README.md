@@ -1,15 +1,11 @@
 ## klasik
-
 **Difficulty:** Easy
-
 **Author:** n4siKvn1ng
 
 ### Description
-
 Kriptografi tidak selalu berisi terkait rumus, terkadang sebelum masuk ke rumus perlu untuk melakukan konversi terlebih dahulu ke bentuk yang lain.
 
 ### Solution
-
 ![alt text](image.png)
 
 Diberikan ciphertext yang panjang. Dengan menggunakan [Cipher Identifier](https://www.dcode.fr/cipher-identifier) dapat diperoleh encodingnya adalah Base32.
@@ -31,5 +27,4 @@ Di decode lagi dengan tools yang sama hasilnya adalah binary.
 Di decode lagi dengan tools yang sama hasilnya adalah flag.
 
 ### Flag
-
 NCLPS1{lanjut_bang_jangan_menyerah_}

@@ -1,15 +1,11 @@
 ## gerbang logika
-
 **Difficulty:** Medium-Hard
-
 **Author:** n4siKvn1ng
 
 ### Description
-
 Chall ini dasarnya ialah seperti chall crypto di Incognito CTF 4.0 Saya coba modifikasi dengan menambahkan beberapa hal.
 
 ### Solution
-
 Dari source code, dapat diketahui bahwa alur enkripsi yang terdiri dari operasi XOR dengan output linear congruential generator (LCG) dan transformasi bit berdasarkan swap. Ciphertext yang diberikan dalam bentuk heksadesimal, sementara plaintext yang valid dapat diverifikasi dengan hash SHA-256 yang disediakan.
 
 ```python
@@ -106,6 +102,4 @@ for m in (0,1,2):
 ```
 
 ### Flag
-
 NCLPS1{gerbang_logika_dengan_sedikit_bumbu_lcg_}
-

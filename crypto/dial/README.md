@@ -1,15 +1,11 @@
 ## Dial & Decode
-
 **Difficulty:** Easy-Medium
-
 **Author:** moonetics
 
 ### Description
-
 “Mereka” menelepon, tapi tidak dengan cara yang kamu kira. Tugasmu: dengarkan, pahami, bongkar.
 
-### Initial Analysis
-
+### Solution
 ```python
 dtmf_freqs = {
     '1': (697, 1209), '2': (697, 1336), '3': (697, 1477), 'A': (697, 1633),
@@ -85,5 +81,4 @@ print(long_to_bytes(m).decode("utf-8", errors="replace"))
 ```
 
 ### Flag
-
 NCLPS1{hai1_BOl3H_aku_m1nta_nom0r_t3lepOn_k4mu?_0dcd60dab2}

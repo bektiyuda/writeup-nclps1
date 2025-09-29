@@ -1,17 +1,13 @@
 ## thread
-
 **Difficulty:** Hard
-
 **Author:** n4siKvn1ng
 
 ### Description
-
 Lagi ngerjain proyek yang kejar tayang tahun ini di bulan agustus dan pikiran cape lihat kodingan mulu, coba iseng untuk scroll fesnuk. Tiba-tiba disuguhkan oleh sebuah postingan terkait artikel "Decrypting Encrypted files from Akira Ransomware" dari website berikut:
 
 https://tinyhack.com/2025/03/13/decrypting-encrypted-files-from-akira-ransomware-linux-esxi-variant-2024-using-a-bunch-of-gpus/#more-1090 Chall ini konsepnya meniru proses yang dilakukan di dalam artikel, tetapi versi mini. Artinya tidak perlu GPU cukup pakai CPU, jangan jalan sendiri tapi harus barengan dengan kerjaan berbeda.
 
 ### Solution
-
 ```python
 import time
 import random
@@ -96,5 +92,4 @@ print('Seed:', seed, 'UTC:', time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(seed
 ```
 
 ### Flag
-
 ![](flag.png)

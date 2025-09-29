@@ -1,15 +1,11 @@
 ## collisions
-
 **Difficulty:** Medium-Hard
-
 **Author:** n4siKvn1ng
 
 ### Description
-
 Hash adalah fungsi satu arah, apakah ada attack untuk hash? Yaps ada berupa collisions atau dictionary attack, tapi untuk chall ini tidak menggunakan dictionary attack Bentuk collisions bisa tabrakan dari input yang berbeda atau juga nilai akhir kembali ke awal.
 
 ### Solution
-
 ```python
 import functools; print(functools.reduce(lambda flag, i: flag ^ (flag >> 2**i), range(9), int.from_bytes(b"NCLPS1{redacted}", "big")))
 ```

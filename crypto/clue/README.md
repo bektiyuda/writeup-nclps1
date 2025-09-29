@@ -1,17 +1,12 @@
 ## clue
-
 **Difficulty:** Medium
-
 **Author:** n4siKvn1ng
-
 **Connection:** nc ctf.noctralupra.space 10319
 
 ### Description
-
 Lima angka pertama adalah gema dari masa lalu, dua angka terakhir, yang tak terucap, adalah benih dari takdirmu. Apakah kamu termasuk orang yang bisa menentukan takdir sendiri?
 
 ### Solution
-
 * The 5 Cosmic Numbers (clue):
 
 ```json
@@ -145,5 +140,4 @@ console.log({ p: p.toString(), q: q.toString(), flag });
 ```
 
 ### Flag
-
 NCLSP1{nilai_acak_yang_bisa_dtebak_adalah_PRNG_problem}

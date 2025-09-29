@@ -1,15 +1,11 @@
 ## tanpa kunci
-
 **Difficulty:** Easy-Medium
-
 **Author:** n4siKvn1ng
 
 ### Description
-
 Bisakah recover flag tanpa diberikan key? sebelum eksekusi tela'ah dulu, apa sih yang bisa diexploitasi
 
 ### Solution
-
 ```python
 FLAG = "NCLPS1{REDACTED}"
 KEY = "" # REDACTED
@@ -41,8 +37,6 @@ Pada source codenya dapat diketahui bahwa fungsi `xor_cipher` melakukan XOR byte
 Dengan format flag **NCLPS1{}**, *known plaintext* dapat diketahui. Jika sebagian plaintext diketahui, maka `key[i % L] = ct[i] XOR pt[i]`. Dengan mengumpulkan cukup banyak posisi i untuk tiap `i % L`, kita dapat menebak dan memverifikasi panjang kunci L.
 
 Solusinya adalah konversi hex ke bytes lalu asumsikan panjang kunci L dalam rentang yang wajar (mis. 1–63).Gunakan `NCLPS1{` pada indeks 0 - 6, dan `}` pada indeks terakhir, untuk menghitung kandidat byte kunci pada posisi modulo L. Cek konsistensi, jika satu kelas kongruensi menghasilkan dua nilai berbeda, maka tolak L tersebut. Dekripsi penuh dan validasi, apakah output diawali `NCLPS1{`, berakhiran `}`, seluruh byte ASCII cetak. Untuk implementasinya adalah solver berikut ini:
-
-### Solver (versi yang digunakan di penyelesaian)
 
 ```python
 import string
@@ -88,5 +82,4 @@ print("Flag:", pt.decode())
 ```
 
 ### Flag 
-
 NCLPS1{t4np4_k3y_buk4n_m4s4l4h_s3l4g1_p4nj4ng_pr3f1x_s4m4_d3ng4n_p4nj4ng_k3y}

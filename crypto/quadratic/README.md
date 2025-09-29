@@ -1,15 +1,11 @@
 ## quadratic
-
 **Difficulty:** Medium
-
 **Author:** n4siKvn1ng
 
 ### Description
-
 Kriptografi berbeda dengan Cryptocurrency/Blockchain, tetapi yang mendasari Cryptocurrency adalah kriptografi. Dasar chall untuk kripto memanglah matematika, ini adalah salah satu implementasinya dengan sedikit bumbu rsa dasar.
 
 ### Solution
-
 ```python
 from Crypto.Util.number import getPrime, bytes_to_long
 
@@ -103,5 +99,4 @@ print(long_to_bytes(m))
 ```
 
 ### Flag
-
 NCLPS1{p3r$4m44n_kv4dr4t_}

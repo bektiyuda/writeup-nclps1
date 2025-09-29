@@ -1,15 +1,11 @@
 ## rox_star
-
 **Difficulty:** Easy
-
 **Author:** n4siKvn1ng
 
 ### Description
-
 x or atau dibaca ex or adalah dasar yang sangat penting untuk kriptografi Karena kriptografi seringkali memanfaatkan kemampuan operasi x or Gimana cara kerjanya silahkan dicoba
 
 ### Solution
-
 ```python
 import random; random.seed(0)
 

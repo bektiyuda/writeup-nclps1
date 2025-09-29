@@ -1,15 +1,11 @@
 ## sing
-
 **Difficulty:** Insane
-
 **Author:** n4siKvn1ng
 
 ### Description
-
 Mencoba untuk implementasi sebuah cryptosystem dengan melanggar rule utama untuk mengamankan flag. Apakah itu sebuah kesalahan? i don't know... Let's just sing same song with Mr. Jamal Note: maybe this tool will help you https://sagemanifolds.obspm.fr/install_ubuntu.html
 
 ### Solution
-
 ```
 p2 = 102360775616927576983385464260307534406913988994641083488371841417601237589487
  a = 102360775616927576983385464260307534406913988994641083488371841417601237589484
@@ -25,8 +21,6 @@ y1 = 148903609117194983033598807456731312526982777835220960036997662860656621811
 c1 = 36190580977708825355326737534548059444874621589153607092572356007292483493417
 c2 = 52066014497039620520753136552806843298512257316676936511291473589116415755657
 ```
-
-## Analisis Awal
 
 Tantangan menggabungkan dua sisi. Di sisi pertama terdapat parameter ElGamal $p_1$: generator $g_1$, public key $y_1 = g_1^n \pmod{p_1}$, serta ciphertext $(c_1, c_2)$. Di sisi kedua terdapat parameter yang menyerupai kurva eliptik dengan modulus $p_2$, titik dasar $G$, dan hasil perkalian skalar $Q = nG$. Tujuannya memulihkan $n$ dari sisi kurva untuk kemudian digunakan dalam dekripsi ElGamal.
 
@@ -93,5 +87,4 @@ for rc in (r, -r):
 ```
 
 ### Flag
-
 NCLPS1{3cc_But_s!nGul4r}
