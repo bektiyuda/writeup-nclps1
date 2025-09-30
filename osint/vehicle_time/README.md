@@ -9,9 +9,11 @@ Aku diberi tahu, kalau platform ini pernah melakukan sesuatu di masa lalu. Tapi 
 Deskripsi mengarahkan kita untuk menelusuri perubahan yang pernah dilakukan web di masa lalu. Dapat dilakukan pencarian hal tersebut menggunkan tools wayback machine dari (archive.org).
 
 ![alt text](image.png)
+
 Dengan memasukkan url ke wayback machine ditemukan satu modifikasi di masa lalu.
 
 ![alt text](image-1.png)
+
 Dilihat source code nya didapatkan flagnya.
 
 ### Flag

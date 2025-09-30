@@ -11,12 +11,15 @@ Link: http://bit.ly/46wt9LG
 Diberikan sebuah video.
 
 ![alt text](img.png)
+
 Saya ss bagian yang paling kelihatan bangunannya.
 
 ![alt text](image.png)
+
 Search pake google image gambarnya dan ketemu kalo itu bangunan PLTU Paiton Probolinggo.
 
 ![alt text](image-1.png)
+
 Search di gmaps trus ke review, filter ke terbaru scroll dikit dapat flagnya.
 
 ### Flag
